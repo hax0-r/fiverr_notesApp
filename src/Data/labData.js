@@ -126,61 +126,61 @@ const LAB2_DATA = [
 const LAB3_DATA = [
     {
         id: 1,
-        img: "./LabImages/Lab3/lab3 (1).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Lab 1",
         description: "Introduction to HTML and CSS"
     },
     {
         id: 2,
-        img: "./LabImages/Lab3/lab3 (2).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Handsaw",
         description: "A manual tool for cutting wood or other materials."
     },
     {
         id: 3,
-        img: "./LabImages/Lab3/lab3 (3).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Saw",
         description: "For cutting wood or other materials."
     },
     {
         id: 4,
-        img: "./LabImages/Lab3/lab3 (4).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Screwdriver",
         description: "For turning screws."
     },
     {
         id: 5,
-        img: "./LabImages/Lab3/lab3 (5).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Stick Welder",
         description: "A welding machine that uses a consumable electrode coated in flux to weld metals."
     },
     {
         id: 6,
-        img: "./LabImages/Lab3/lab3 (6).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Stud Finder",
         description: "For locating studs behind walls."
     },
     {
         id: 7,
-        img: "./LabImages/Lab3/lab3 (7).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Tape Measure",
         description: "For measuring distances."
     },
     {
         id: 8,
-        img: "./LabImages/Lab3/lab3 (8).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "TIG Welder",
         description: "A welding machine that uses a non-consumable tungsten electrode and an inert gas to weld metals, often for precise and high-quality welds."
     },
     {
         id: 9,
-        img: "./LabImages/Lab3/lab3 (9).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Utility Knife",
         description: "For cutting various materials."
     },
     {
         id: 10,
-        img: "./LabImages/Lab3/lab3 (10).jpg",
+        img: "/LabImages/Lab1/Level.jpg",
         name: "Water Jet",
         description: "A tool that uses high-pressure water mixed with abrasive material."
     }

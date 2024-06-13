@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Ensure you have Bootstrap CSS imported
 
 const Login = () => {
   const navigate = useNavigate();
@@ -54,8 +55,10 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="max-w-[80%] m-auto pt-20">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light loginBG">
+      <img src="./Image/loginBG.jpg" className="fixed top-0 left-0 h-screen w-screen" alt="" />
+      <div className="card shadow-sm p-4" style={{ width: '100%', maxWidth: '400px' }}>
+        <h2 className="text-center mb-4">Login</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
@@ -75,7 +78,7 @@ const Login = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="Enter password"
               name="password"
               value={formData.password}
               onChange={handleChange}
@@ -86,12 +89,12 @@ const Login = () => {
             </Form.Control.Feedback>
           </Form.Group>
           {errors.form && <div className="text-danger mb-3">{errors.form}</div>}
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className="w-100">
             Login
           </Button>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 

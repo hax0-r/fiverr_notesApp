@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import { useNavigate, useParams } from 'react-router-dom';
-import { LAB2_DATA } from '../Data/labData';
+import { LAB1_DATA, LAB2_DATA, LAB3_DATA } from '../Data/labData';
 
 const Product = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const productsFilter = LAB2_DATA.filter((item) => item.name === id);
+
+    const combinedData = [...LAB1_DATA, ...LAB2_DATA, ...LAB3_DATA];
+
+    const productsFilter = combinedData.filter((item) => item.name === id);
     const [items] = productsFilter;
     const [selectedTimes, setSelectedTimes] = useState([]);
 
