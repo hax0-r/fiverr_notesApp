@@ -18,7 +18,7 @@ const Home = () => {
                 <p className="mb-0 text-gray-600 ">Room E201</p>
               </div>
             </Link>
-            <Link className='no-underline text-[#212529]' >
+            <Link to={"/lab2"} className='no-underline text-[#212529]' >
               <div className="lab2 cursor-pointer flex justify-between active:scale-[.99] select-none transition-all items-center p-4 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors">
                 <p className="mb-0 text-xl font-semibold">LAB 2</p>
                 <p className="mb-0 text-gray-600">Room E202</p>
