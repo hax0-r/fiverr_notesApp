@@ -34,7 +34,7 @@ const Lab2 = () => {
                             <Link className='no-underline' to={`/product/${name}`}>
                                 <div key={index} className="md:flex cursor-pointer select-none hover:bg-zinc-100 transition-all duration-300 active:scale-[.99] justify-center gap-10 border-2 border-zinc-200 rounded-md 
                             mb-4 px-2 mx-[3rem] py-2">
-                                    <img src={img} className="max-h-[15rem] rounded-md shadow-xl" alt={name} />
+                                    <img src={img} className="max-w-[15rem] rounded-md shadow-xl" alt={name} />
                                     <div className="py-1 max-w-[42rem] w-full">
                                         <h2 className="text-lg text-zinc-800 font-bold">{name}</h2>
                                         <p className="text-sm text-zinc-400">{description}</p>
