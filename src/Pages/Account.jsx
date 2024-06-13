@@ -15,11 +15,12 @@ const Account = () => {
         setSelectedTimes(storedTimes);
     }, []);
 
-    const handleTimeClick = (time) => {
-        if (timesToReturn.includes(time)) {
-            setTimesToReturn(timesToReturn.filter(t => t !== time));
+    const handleTimeClick = (date, time, lab) => {
+        const timeIdentifier = `${date} ${time} ${lab}`;
+        if (timesToReturn.includes(timeIdentifier)) {
+            setTimesToReturn(timesToReturn.filter(t => t !== timeIdentifier));
         } else {
-            setTimesToReturn([...timesToReturn, time]);
+            setTimesToReturn([...timesToReturn, timeIdentifier]);
         }
     };
 
@@ -28,14 +29,14 @@ const Account = () => {
             toast.error("Please select items to return");
             return;
         }
-        const updatedTimes = selectedTimes.filter(timeObj => !timesToReturn.includes(timeObj.time));
+        const updatedTimes = selectedTimes.filter(timeObj => !timesToReturn.includes(`${timeObj.date} ${timeObj.time} ${timeObj.lab}`));
         localStorage.setItem('selectedTimes', JSON.stringify(updatedTimes));
         setSelectedTimes(updatedTimes);
         setTimesToReturn([]);
         toast.success("Successfully removed");
     };
 
-    const isTimeSelected = (time) => timesToReturn.includes(time);
+    const isTimeSelected = (date, time, lab) => timesToReturn.includes(`${date} ${time} ${lab}`);
 
     return (
         <>
@@ -48,17 +49,22 @@ const Account = () => {
                         </button>
                     </div>
                     <div className="max-w-[40rem] pt-10 m-auto">
-                        <Card.Text className='text-center'>Student Name</Card.Text>
+                        <Card.Text className='text-center pb-2'>Student Name</Card.Text>
                         <Card.Text className='text-center border-2 mb-10 border-zinc-200 rounded-md p-2'>Current Check-Outs</Card.Text>
                         {selectedTimes.map((timeObj, index) => (
-                            <div key={index} className='flex justify-center gap-2 items-center'>
+                            <div key={index} className='flex justify-center mb-3 gap-2 items-center'>
                                 <img src={timeObj.img} alt="" className='h-24 p-1 rounded-md  ' />
-                                <Card.Text
-                                    className={`text-center border-2 border-zinc-200 rounded-md w-full p-4 active:scale-[.99] transition-all cursor-pointer ${isTimeSelected(timeObj.time) ? 'bg-red-500 text-white' : ''}`}
-                                    onClick={() => handleTimeClick(timeObj.time)}
-                                >
-                                    A item {timeObj.time}
-                                </Card.Text>
+                                <div className='w-full'>
+                                    <Card.Text className='pb-1 font-semibold'>{`Lab ${timeObj.lab}`}</Card.Text>
+                                    <Card.Text
+                                        className={`text-center border-2 border-zinc-200 rounded-md w-full p-4 active:scale-[.99] transition-all cursor-pointer ${isTimeSelected(timeObj.date, timeObj.time, timeObj.lab) ? 'bg-red-500 text-white' : ''}`}
+                                        onClick={() => handleTimeClick(timeObj.date, timeObj.time, timeObj.lab)}
+                                    >
+                                        {timeObj.date}
+                                        <br />
+                                        A item {timeObj.time}
+                                    </Card.Text>
+                                </div>
                             </div>
                         ))}
                     </div>
