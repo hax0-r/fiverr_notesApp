@@ -1,61 +1,61 @@
 const LAB1_DATA = [
     {
         id: 1,
-        img: "./LabImages/Lab1/Allen.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Allen Wrench",
         description: "For driving hexagonal socket screws."
     },
     {
         id: 2,
-        img: "./LabImages/Lab1/Belt.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Belt Sander",
         description: "A tool with a continuous loop of sandpaper used for sanding and smoothing surfaces."
     },
     {
         id: 3,
-        img: "./LabImages/Lab1/Chisel.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Chisel",
         description: "For carving or cutting wood, stone, or metal."
     },
     {
         id: 4,
-        img: "./LabImages/Lab1/Drill.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Drill",
         description: "For making holes in materials using rotating drill bits."
     },
     {
         id: 5,
-        img: "./LabImages/Lab1/Hammer.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Hammer",
         description: "For driving nails into wood or other materials."
     },
     {
         id: 6,
-        img: "./LabImages/Lab1/Handsaw.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Handsaw",
         description: "A manual tool for cutting wood or other materials."
     },
     {
         id: 7,
-        img: "./LabImages/Lab1/Mills.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Mills",
         description: "A machine tool that removes material from a workpiece by rotating a cutting tool, used for precise machining."
     },
     {
         id: 8,
-        img: "./LabImages/Lab1/Oscillating.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Oscillating Multi-Tool",
         description: "A versatile power tool with interchangeable accessories that vibrate in small, rapid arcs, used for sanding, cutting, scraping, and grinding in tight or awkward spaces."
     },
     {
         id: 9,
-        img: "./LabImages/Lab1/Resin.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Resin 3D Printer",
         description: "A 3D printer that uses liquid resin cured by UV light to create detailed objects."
     },
     {
         id: 10,
-        img: "./LabImages/Lab1/Soldering.jpg",
+        img: "/LabImages/Lab1/Band.jpg",
         name: "Soldering Iron",
         description: "For soldering electronic components."
     }

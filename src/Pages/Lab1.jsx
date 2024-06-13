@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoSearchSharp } from 'react-icons/io5';
 import { LAB1_DATA } from '../Data/labData';
+import { Link } from 'react-router-dom';
 
 const Lab1 = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -16,7 +17,7 @@ const Lab1 = () => {
 
     return (
         <>
-            <div className="max-w-[80rem] px-10 py-10">
+             <div className="max-w-[80rem] px-10 py-10">
                 <div className="">
                     <div className="flex max-w-[40rem] m-auto p-1 items-center gap-4 border-2 border-zinc-200 rounded-md">
                         <input
@@ -30,14 +31,16 @@ const Lab1 = () => {
                     </div>
                     <div className="pt-10 ">
                         {filteredData.map(({ img, name, description }, index) => (
-                            <div key={index} className="md:flex cursor-pointer select-none hover:bg-zinc-100 transition-all duration-300 active:scale-[.99] justify-center gap-10 border-2 border-zinc-200 rounded-md 
+                            <Link className='no-underline' to={`/product/${name}`}>
+                                <div key={index} className="md:flex cursor-pointer select-none hover:bg-zinc-100 transition-all duration-300 active:scale-[.99] justify-center gap-10 border-2 border-zinc-200 rounded-md 
                             mb-4 px-2 mx-[3rem] py-2">
-                                <img src={img} className="max-h-[15rem] rounded-md shadow-xl" alt={name} />
-                                <div className="py-1 max-w-[42rem] w-full">
-                                    <h2 className="text-lg font-bold">{name}</h2>
-                                    <p className="text-sm text-zinc-400">{description}</p>
+                                    <img src={img} className="max-w-[15rem] rounded-md shadow-xl" alt={name} />
+                                    <div className="py-1 max-w-[42rem] w-full">
+                                        <h2 className="text-lg text-zinc-800 font-bold">{name}</h2>
+                                        <p className="text-sm text-zinc-400">{description}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { IoIosSettings } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="bg-gray-100 fixed top-6 right-10 flex items-center justify-end ">
-        <IoIosSettings className='text-[2.5rem] cursor-pointer text-zinc-600 transition-all hover:rotate-45' />
+        <IoIosSettings onClick={() => navigate("/account")} className='text-[2.5rem] cursor-pointer text-zinc-600 transition-all hover:rotate-45' />
       </div>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <div className="max-w-2xl w-full p-8 bg-white shadow-lg rounded-lg">

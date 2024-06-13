@@ -17,15 +17,15 @@ const Product = () => {
 
     const handleTimeClick = (time) => {
         const timeWithImg = { time, img: items.img };
-        const updatedTimes = selectedTimes.some(t => t.time === time)
-            ? selectedTimes.filter(t => t.time !== time)
+        const updatedTimes = selectedTimes.some(t => t.time === time && t.img === items.img)
+            ? selectedTimes.filter(t => !(t.time === time && t.img === items.img))
             : [...selectedTimes, timeWithImg];
 
         setSelectedTimes(updatedTimes);
         localStorage.setItem('selectedTimes', JSON.stringify(updatedTimes));
     };
 
-    const isSelected = (time) => selectedTimes.some(t => t.time === time);
+    const isSelected = (time) => selectedTimes.some(t => t.time === time && t.img === items.img);
 
     const renderTimeSlots = (times) => {
         return times.map((time, index) => (

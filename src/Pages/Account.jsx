@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Account = () => {
     const [selectedTimes, setSelectedTimes] = useState([]);
@@ -22,16 +24,22 @@ const Account = () => {
     };
 
     const handleReturnEarly = () => {
+        if (timesToReturn.length === 0) {
+            toast.error("Please select items to return");
+            return;
+        }
         const updatedTimes = selectedTimes.filter(timeObj => !timesToReturn.includes(timeObj.time));
         localStorage.setItem('selectedTimes', JSON.stringify(updatedTimes));
         setSelectedTimes(updatedTimes);
         setTimesToReturn([]);
+        toast.success("Successfully removed");
     };
 
     const isTimeSelected = (time) => timesToReturn.includes(time);
 
     return (
         <>
+            <ToastContainer />
             <div className="max-w-[80rem] m-auto px-10">
                 <div className="">
                     <div className="flex mt-4">
@@ -44,9 +52,9 @@ const Account = () => {
                         <Card.Text className='text-center border-2 mb-10 border-zinc-200 rounded-md p-2'>Current Check-Outs</Card.Text>
                         {selectedTimes.map((timeObj, index) => (
                             <div key={index} className='flex justify-center gap-2 items-center'>
-                                <img src={timeObj.img} alt="" className='h-24 p-1 rounded-md' />
+                                <img src={timeObj.img} alt="" className='h-24 p-1 rounded-md  ' />
                                 <Card.Text
-                                    className={`text-center border-2 w-full border-zinc-200 rounded-md p-4 active:scale-[.99] transition-all cursor-pointer ${isTimeSelected(timeObj.time) ? 'bg-red-500 text-white' : ''}`}
+                                    className={`text-center border-2 border-zinc-200 rounded-md w-full p-4 active:scale-[.99] transition-all cursor-pointer ${isTimeSelected(timeObj.time) ? 'bg-red-500 text-white' : ''}`}
                                     onClick={() => handleTimeClick(timeObj.time)}
                                 >
                                     A item {timeObj.time}
