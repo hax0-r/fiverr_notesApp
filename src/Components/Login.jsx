@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';  
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { userContext } from '../Context/LoginContext';
+
 
 const Login = () => {
+
+  // const [formData, setFormData] = useState({
+  //   username: '',
+  //   password: '',
+  // });
+
+  const { setFormData, formData } = useContext(userContext)
+
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-  });
 
   const [errors, setErrors] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
