@@ -14,7 +14,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const predefinedUsername = 'qwe';
+  const predefinedUsername = '123';
   const predefinedPassword = '123';
 
   const handleChange = (e) => {
