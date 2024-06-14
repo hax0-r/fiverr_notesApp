@@ -1,15 +1,18 @@
 import React from 'react';
 import { IoIosSettings } from 'react-icons/io';
 import { Link, useNavigate } from 'react-router-dom';
+import bgImage from "../assets/loginBG.jpg"
+
 
 const Home = () => {
   const navigate = useNavigate()
   return (
     <>
-      <div className="bg-gray-100 fixed top-6 right-10 flex items-center justify-end ">
-        <IoIosSettings onClick={() => navigate("/account")} className='text-[2.5rem] cursor-pointer text-zinc-600 transition-all hover:rotate-45' />
+      <div className=" fixed top-6 right-10 z-10 flex items-center justify-end ">
+        <IoIosSettings onClick={() => navigate("/account")} className='text-[2.5rem] cursor-pointer text-zinc-100 transition-all hover:rotate-45' />
       </div>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <img src={bgImage} className="fixed -z-10 top-0 left-0 h-screen w-screen" alt="backgroundImage" />
+      <div className="min-h-[100vh] flex items-center  justify-center">
         <div className="max-w-2xl w-full p-8 bg-white shadow-lg rounded-lg">
           <p className='text-gray-500 text-lg mb-6'>Choose Your Lab</p>
           <div className="space-y-4 flex flex-col">
