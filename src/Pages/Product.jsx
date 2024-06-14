@@ -98,7 +98,7 @@ const Product = () => {
                     <div className="md:flex justify-between gap-5 text-white px-[3rem] pt-8">
                         <div className="flex flex-col gap-3">
                             <img src={items.img} alt="" />
-                            <Card.Text className='pt-2'>{items.description}</Card.Text>
+                            <Card.Text className='pt-2 backdrop-blur-md bg-[#ffffff1a] p-3 pb-2 rounded-md'>{items.description}</Card.Text>
                         </div>
                         <div className="max-w-[36.5rem] w-full flex flex-col">
                             <Card.Text className='pb-2 font-semibold'><u>Lab {items.lab}</u></Card.Text>

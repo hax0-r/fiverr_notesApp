@@ -145,15 +145,8 @@ const LAB2_DATA = [
 ];
 const LAB3_DATA = [
     {
-        id: 1,
-        img: "/LabImages/Lab1/Level.jpg",
-        lab: 3,
-        name: "Lab 1",
-        description: "Introduction to HTML and CSS"
-    },
-    {
         id: 2,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/Lab1/Handsaw.jpg",
         lab: 3,
         name: "Handsaw",
         description: "A manual tool for cutting wood or other materials."
