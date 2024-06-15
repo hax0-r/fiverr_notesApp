@@ -8,7 +8,7 @@ import { userContext } from '../Context/LoginContext';
 import bgImage from "../assets/loginBG.jpg"
 
 const Account = () => {
-    const { formData } = useContext(userContext);
+    const { formData } = useContext(userContext);  
     const [selectedTimes, setSelectedTimes] = useState([]);
     const [timesToReturn, setTimesToReturn] = useState([]);
     const navigate = useNavigate();
@@ -41,8 +41,6 @@ const Account = () => {
 
     const isTimeSelected = (date, time, lab, img, name) => timesToReturn.includes(`${date}-${time}-${lab}-${img}-${name}`);
 
-    const displayUsername = formData.username || "User0001";
-
     return (
         <>
             <img src={bgImage} className="fixed -z-10 top-0 left-0 h-screen w-screen" alt="backgroundImage" />
@@ -55,7 +53,9 @@ const Account = () => {
                         </button>
                     </div>
                     <div className="max-w-[40rem] pt-10 m-auto">
-                        <Card.Text className='text-center pb-2'>{displayUsername}</Card.Text>
+                        <Card.Text className='text-center text-white tracking-wider	 font-semibold text-xl pb-2'>
+                            {formData.username ? formData.username : "User0001"}
+                        </Card.Text>
                         <Card.Text className='text-center border-2 mb-10 text-white border-zinc-200 rounded-md p-2'>Current Check-Outs</Card.Text>
                         {selectedTimes.map((timeObj, index) => (
                             <div key={index} className='flex justify-center mb-3 gap-2 items-center'>

@@ -1,70 +1,70 @@
 const LAB1_DATA = [
     {
         id: 1,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/hexwrenches-2048px-0323.webp",
         lab: 1,
         name: "Allen Wrench",
         description: "For driving hexagonal socket screws."
     },
     {
         id: 2,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/dewalt-belt-sanders-dcw220b-64_1000.avif",
         lab: 1,
         name: "Belt Sander",
         description: "A tool with a continuous loop of sandpaper used for sanding and smoothing surfaces."
     },
     {
         id: 3,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Chisel.jpg",
         lab: 1,
         name: "Chisel",
         description: "For carving or cutting wood, stone, or metal."
     },
     {
         id: 4,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/drills-2048px-8376.jpg",
         lab: 1,
         name: "Drill",
         description: "For making holes in materials using rotating drill bits."
     },
     {
         id: 5,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Hammer.jpg",
         lab: 1,
         name: "Hammer",
         description: "For driving nails into wood or other materials."
     },
     {
         id: 6,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/handsaw-2048px-0104-3x2-1.webp",
         lab: 1,
         name: "Handsaw",
         description: "A manual tool for cutting wood or other materials."
     },
     {
         id: 7,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Mills.jpeg",
         lab: 1,
         name: "Mills",
         description: "A machine tool that removes material from a workpiece by rotating a cutting tool, used for precise machining."
     },
     {
         id: 8,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Oscillating Multi.jpg",
         lab: 1,
         name: "Oscillating Multi-Tool",
         description: "A versatile power tool with interchangeable accessories that vibrate in small, rapid arcs, used for sanding, cutting, scraping, and grinding in tight or awkward spaces."
     },
     {
         id: 9,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Resin 3D Printer.webp",
         lab: 1,
         name: "Resin 3D Printer",
         description: "A 3D printer that uses liquid resin cured by UV light to create detailed objects."
     },
     {
         id: 10,
-        img: "/LabImages/Lab1/Band.jpg",
+        img: "/LabImages/labs1/Soldering Iron.jpg",
         lab: 1,
         name: "Soldering Iron",
         description: "For soldering electronic components."
@@ -146,63 +146,63 @@ const LAB2_DATA = [
 const LAB3_DATA = [
     {
         id: 2,
-        img: "/LabImages/Lab1/Handsaw.jpg",
+        img: "/LabImages/labs3/handsaw-2048px-0104-3x2-1.webp",
         lab: 3,
-        name: "Handsaw",
+        name: "Handsaws",
         description: "A manual tool for cutting wood or other materials."
     },
     {
         id: 3,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Saw.jpg",
         lab: 3,
         name: "Saw",
         description: "For cutting wood or other materials."
     },
     {
         id: 4,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Screwdriver.jpg",
         lab: 3,
         name: "Screwdriver",
         description: "For turning screws."
     },
     {
         id: 5,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Stick Welder.jpg",
         lab: 3,
         name: "Stick Welder",
         description: "A welding machine that uses a consumable electrode coated in flux to weld metals."
     },
     {
         id: 6,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Stud Finder.jpeg",
         lab: 3,
         name: "Stud Finder",
         description: "For locating studs behind walls."
     },
     {
         id: 7,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Tape Measure.jpg",
         lab: 3,
         name: "Tape Measure",
         description: "For measuring distances."
     },
     {
         id: 8,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/TIG Welder.jpg",
         lab: 3,
         name: "TIG Welder",
         description: "A welding machine that uses a non-consumable tungsten electrode and an inert gas to weld metals, often for precise and high-quality welds."
     },
     {
         id: 9,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Utility Knife.jpg",
         lab: 3,
         name: "Utility Knife",
         description: "For cutting various materials."
     },
     {
         id: 10,
-        img: "/LabImages/Lab1/Level.jpg",
+        img: "/LabImages/labs3/Water Jet.avif",
         lab: 3,
         name: "Water Jet",
         description: "A tool that uses high-pressure water mixed with abrasive material."

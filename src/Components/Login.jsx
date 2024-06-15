@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { userContext } from '../Context/LoginContext';
+import bgImage from '../assets/loginBG.jpg'
 
 
 const Login = () => {
@@ -57,7 +58,7 @@ const Login = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light loginBG">
-      <img src="./Image/loginBG.jpg" className="fixed top-0 left-0 h-screen w-screen" alt="backgroundImage" />
+      <img src={bgImage} className="fixed top-0 left-0 h-screen w-screen" alt="backgroundImage" />
       <div className="card shadow-sm p-4" style={{ width: '100%', maxWidth: '400px' }}>
         <h2 className="text-center mb-4">Login</h2>
         <Form onSubmit={handleSubmit}>

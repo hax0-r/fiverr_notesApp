@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { IoSearchSharp } from 'react-icons/io5';
 import { LAB1_DATA } from '../Data/labData';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bgImage from "../assets/loginBG.jpg"
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const Lab1 = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate()
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
@@ -18,8 +20,8 @@ const Lab1 = () => {
 
     return (
         <>
-      <img src={bgImage} className="fixed -z-10 top-0 left-0 h-screen w-screen" alt="backgroundImage" />
-             <div className="max-w-[80rem]  px-10 py-10">
+            <img src={bgImage} className="fixed -z-10 top-0 left-0 h-screen w-screen" alt="backgroundImage" />
+            <div className="max-w-[80rem] m-auto px-10 py-10">
                 <div className="">
                     <div className="flex max-w-[40rem] m-auto p-1 items-center gap-4 border-2 border-zinc-200 rounded-md">
                         <input
@@ -46,6 +48,14 @@ const Lab1 = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+            <div className="flex fixed bottom-10 right-10 mt-4">
+                <button
+                    onClick={() => navigate(-1)}
+                    className='bg-zinc-300 text-black px-4 cursor-pointer hover:opacity-80 active:scale-95 font-semibold py-[.7rem] rounded-md transition-all duration-300'
+                >
+                    <IoMdArrowRoundBack />
+                </button>
             </div>
         </>
     );
